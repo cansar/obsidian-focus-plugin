@@ -1,47 +1,30 @@
 import { Plugin } from "obsidian";
 
-export default class FullScreenPlugin extends Plugin {
+export default class FocusModePlugin extends Plugin {
+  private isFocusMode = false;
+
   onload() {
     this.addCommand({
-      id: "fullscreen-focus",
-      name: "Fullscreen focus mode",
-      callback: this.fullscreenMode.bind(this),
+      id: "focus-mode",
+      name: "Toggle focus mode",
+      callback: this.toggleFocusMode.bind(this),
     });
   }
 
-  onunload() {}
+  onunload() {
+    // Clean up when plugin is disabled
+    if (this.isFocusMode) {
+      document.body.classList.remove('focus-mode');
+    }
+  }
 
-  fullscreenMode() {
-    var leaf = this.app.workspace.activeLeaf;
-    if (!leaf) return;
-    var el = leaf.containerEl;
-    var fullscreenMutationObserver;
-
-    el.requestFullscreen();
-
-    // disable mutation observer when exiting fullscreen mode
-    el.addEventListener("fullscreenchange", (event) => {
-      if (!document.fullscreenElement) {
-        fullscreenMutationObserver.disconnect();
-        document.body.classList.remove('fullscreen')
-      } else {
-        document.body.classList.add('fullscreen')
-      }
-    });
-
-    // copy all nodes
-    fullscreenMutationObserver = new MutationObserver((mutationRecords) => {
-      mutationRecords.forEach((mutationRecord) => {
-        mutationRecord.addedNodes.forEach((node) => {
-          document.body.removeChild(node);
-          el.appendChild(node);
-        });
-      });
-      // focus on prompt for file open
-      if (document.querySelector(".prompt-input"))
-        document.querySelector(".prompt-input").focus();
-    });
-
-    fullscreenMutationObserver.observe(document.body, { childList: true });
+  toggleFocusMode() {
+    this.isFocusMode = !this.isFocusMode;
+    
+    if (this.isFocusMode) {
+      document.body.classList.add('focus-mode');
+    } else {
+      document.body.classList.remove('focus-mode');
+    }
   }
 }

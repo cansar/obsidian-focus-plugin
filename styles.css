@@ -1,0 +1,92 @@
+/* Focus Mode Plugin Styles */
+/* Hide UI elements when focus mode is active */
+
+.focus-mode .workspace-split.mod-left-split,
+.focus-mode .workspace-split.mod-right-split {
+  display: none;
+}
+
+.focus-mode .workspace-tab-header {
+  display: none;
+}
+
+.focus-mode .status-bar {
+  display: none;
+}
+
+.focus-mode .workspace-ribbon {
+  display: none;
+}
+
+.focus-mode .titlebar {
+  display: none;
+}
+
+.focus-mode .workspace-leaf-resize-handle {
+  display: none;
+}
+
+.focus-mode .workspace-split.mod-vertical > .workspace-leaf-resize-handle {
+  display: none;
+}
+
+.focus-mode .workspace-split.mod-horizontal > .workspace-leaf-resize-handle {
+  display: none;
+}
+
+.focus-mode .workspace-tabs .workspace-tab-header-container {
+  display: none;
+}
+
+.focus-mode .workspace-tabs .workspace-tab-header-spacer {
+  display: none;
+}
+
+.focus-mode .workspace-tabs .workspace-tab-header-tab-list {
+  display: none;
+}
+
+.focus-mode .workspace-tabs .workspace-tab-header-new-tab {
+  display: none;
+}
+
+.focus-mode .workspace-tabs .workspace-tab-header-tab-container {
+  display: none;
+}
+
+.focus-mode .view-header {
+  display: none;
+}
+
+.focus-mode .workspace-leaf-content {
+  border: none;
+  box-shadow: none;
+}
+
+.focus-mode .workspace-leaf {
+  background: transparent;
+}
+
+.focus-mode .workspace-tabs {
+  background: transparent;
+}
+
+.focus-mode .workspace-tab-container {
+  background: transparent;
+}
+
+.focus-mode .mod-root .workspace-leaf-content {
+  padding: 0;
+}
+
+.focus-mode .view-content {
+  padding: 20px;
+}
+
+.focus-mode .markdown-source-view.mod-cm6 .cm-editor {
+  padding: 20px;
+}
+
+.focus-mode .markdown-preview-view {
+  padding: 20px;
+}
