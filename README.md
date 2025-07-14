@@ -5,7 +5,7 @@ A distraction-free writing plugin that hides UI elements without entering fullsc
 ## Features
 
 - **Hide sidebars** - Left and right sidebars are hidden for maximum writing space
-- **Hide tabs** - Tab headers and navigation are hidden for clean interface
+- **Hide tabs** - Tab headers and navigation are hidden for clean interface (including side-by-side panes)
 - **Hide UI elements** - Status bar, ribbon, titlebar, and resize handles are hidden
 - **Toggle functionality** - Easy on/off switching via command palette or keyboard shortcut
 - **No fullscreen mode** - Keeps window controls and OS integration intact
@@ -23,7 +23,7 @@ A distraction-free writing plugin that hides UI elements without entering fullsc
 When focus mode is active, the following UI elements are hidden:
 - Left sidebar (file explorer, search, etc.)
 - Right sidebar (outline, backlinks, etc.)
-- Tab headers and tab controls
+- Tab headers and tab controls (including in side-by-side panes)
 - Status bar
 - App ribbon (left sidebar icons)
 - Titlebar
