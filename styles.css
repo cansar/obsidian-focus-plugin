@@ -34,7 +34,7 @@
   display: none;
 }
 
-/* Enhanced tab hiding - covers all tab scenarios including side-by-side */
+/* Hide tab headers and controls for the active pane */
 .focus-mode .workspace-tabs .workspace-tab-header-container {
   display: none;
 }
@@ -55,58 +55,7 @@
   display: none;
 }
 
-/* Additional comprehensive tab hiding */
-.focus-mode .workspace-tabs .workspace-tab-header {
-  display: none;
-}
-
-.focus-mode .workspace-tabs .workspace-tab-header-container-inner {
-  display: none;
-}
-
-.focus-mode .workspace-tabs .workspace-tab-container {
-  display: none;
-}
-
-.focus-mode .workspace-tabs .workspace-tab-container-inner {
-  display: none;
-}
-
-.focus-mode .workspace-tabs .workspace-tab-header-tab {
-  display: none;
-}
-
-.focus-mode .workspace-tabs .workspace-tab-header-tab-inner {
-  display: none;
-}
-
-.focus-mode .workspace-tabs .workspace-tab-header-tab-title {
-  display: none;
-}
-
-.focus-mode .workspace-tabs .workspace-tab-header-tab-icon {
-  display: none;
-}
-
-/* Hide tabs for split panes specifically */
-.focus-mode .workspace-split .workspace-tabs .workspace-tab-header-container {
-  display: none;
-}
-
-.focus-mode .workspace-split .workspace-tabs .workspace-tab-header {
-  display: none;
-}
-
-.focus-mode .workspace-split .workspace-tabs {
-  display: none;
-}
-
-/* Hide all tab-related elements in workspace */
-.focus-mode .mod-root .workspace-tabs {
-  display: none;
-}
-
-.focus-mode .workspace-leaf .workspace-tabs {
+.focus-mode .workspace-tabs {
   display: none;
 }
 
