@@ -95,3 +95,16 @@
 .focus-mode .markdown-preview-view {
   padding: 20px;
 }
+
+/* Center the active pane when in focus mode */
+.focus-mode .workspace-split.mod-root {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.focus-mode .workspace-split.mod-root > .workspace-leaf:not([style*="display: none"]) {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
